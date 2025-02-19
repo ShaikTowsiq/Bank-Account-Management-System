@@ -1,2 +1,62 @@
 # Bank-Account-Management-System
 This project is a console-based Bank Account Management System developed in C language using the Windows API (gotoxy) for cursor manipulation to enhance the user interface. The system simulates core banking functionalities like account creation, login, balance checking, and money transfer, providing users with an interactive text-based experience. 
+
+Key Features & Functionalities
+Account Creation
+
+Collects detailed user information: name, address, date of birth, Aadhar number, phone number, and account type.
+Secure password entry with masked input using getch().
+User Authentication
+
+Existing users can securely log in using their credentials.
+Verifies stored user data from files (username.txt).
+Banking Operations
+
+Check Balance: View transaction history and total balance.
+Transfer Money: Transfer funds between accounts with transaction logging (mon.txt).
+Logout & Exit: Secure sign-out and exit options.
+
+🛠️ Skills & Technologies Used
+
+Programming Language: C
+File Handling: Used for persistent data storage (user info and transactions).
+User Input Handling: Secure password entry with character masking.
+Console UI Enhancements:
+Cursor positioning with gotoxy() using Windows API (SetConsoleCursorPosition).
+Loading animations and progress indicators.
+
+📂 Project Structure & Major Functions
+
+Main Functions:
+
+main(): Displays the main menu (Account Creation, Login, Exit).
+account(): Handles new account creation.
+accountcreated(): Confirms successful account registration.
+login(): Facilitates user authentication and redirects to user dashboard.
+loginsu(): Displays successful login message with simulated loading animation.
+display(): Shows user dashboard with options to check balance, transfer money, or logout.
+checkbalance(): Displays transaction history and calculates total balance.
+transfermoney(): Handles fund transfers with transaction logging.
+logout(): Securely logs out the user.
+
+Data Structures:
+
+struct pass: Stores personal and account details.
+struct money: Records money transfer details.
+struct userpass: Manages user passwords.
+
+File Operations:
+
+User Data: Stored in username.txt (Binary file handling with fwrite/fread).
+Transaction Records: Managed in mon.txt.
+
+💻 Frameworks & Libraries
+
+Standard C Libraries:
+
+<stdio.h>: Input/output operations.
+<stdlib.h>: Utility functions (system, exit).
+<string.h>: String manipulations (strcmp, strcpy).
+<conio.h>: Console input/output (used for getch and password masking).
+Windows-Specific Library:
+<windows.h>: Console control (cursor positioning with gotoxy).
